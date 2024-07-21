@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Changed from es2018 to ES6 to match Next.js default
+    "module": "esnext", // Changed from commonjs to esnext to match Next.js default
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler", // Changed from node to bundler to match Next.js default
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "declaration": true,
+    "paths": {
+      "@/*": ["./*"] // Added from Next.js default
+    },
+    "plugins": [
+      {
+        "name": "next" // Added from Next.js default
+      }
+    ]
+  },
+  "include": [
+    "./scripts",
+    "./test",
+    "./typechain",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "files": ["./hardhat.config.ts"],
+  "exclude": ["node_modules"]
+}

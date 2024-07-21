@@ -1,0 +1,43 @@
+{
+  "name": "lenous",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
+    "@rainbow-me/rainbowkit": "^2.1.2",
+    "@tanstack/react-query": "^5.45.0",
+    "@uniswap/sdk-core": "^5.3.1",
+    "@uniswap/smart-order-router": "^3.0.6",
+    "@uniswap/v3-sdk": "^3.9.0",
+    "ethers": "^5.7.2",
+    "jsbi": "^3.2.5",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.5",
+    "react-modal": "^3.16.1",
+    "viem": "^2.14.0",
+    "wagmi": "^2.10.2",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@typechain/ethers-v5": "^11.1.2",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-modal": "^3.16.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "hardhat": "^2.22.6",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
