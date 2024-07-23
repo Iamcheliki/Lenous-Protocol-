@@ -11,9 +11,7 @@ async function main() {
 
   // Deploy the Orderbook contract
   const Orderbook = await ethers.getContractFactory('Orderbook');
-  const orderbook = await Orderbook.deploy(
-    ' 0x9Fb23B3B3a2714F450434c64BF3cD7EF1EeAe6e6'
-  );
+  const orderbook = await Orderbook.deploy(deployer.address);
   await orderbook.deployed();
   console.log('Orderbook deployed to:', orderbook.address);
 
