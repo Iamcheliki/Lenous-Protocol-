@@ -1,19 +1,12 @@
 'use client';
 
 import { http, createStorage, cookieStorage } from 'wagmi';
-import {
-  arbitrum,
-  mainnet,
-  sepolia,
-  polygon,
-  arbitrumGoerli,
-} from 'wagmi/chains';
+import { mainnet, sepolia } from 'wagmi/chains';
 import { Chain, getDefaultConfig } from '@rainbow-me/rainbowkit';
-import { Token } from '@uniswap/sdk-core';
 
 const projectId = '4aac15bd46041b8e047641da7bae91e1';
 
-const supportedChains: Chain[] = [mainnet, polygon, sepolia];
+const supportedChains: Chain[] = [mainnet, sepolia];
 
 export const config = getDefaultConfig({
   appName: 'lenous',

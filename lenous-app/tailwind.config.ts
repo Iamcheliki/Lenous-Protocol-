@@ -25,7 +25,12 @@ const config: Config = {
           ' linear-gradient(90deg, rgba(20, 184, 166, 0.15) 0%, rgba(20, 184, 166, 0) 100%)',
         'tab-linear-gradient':
           ' linear-gradient(180deg, rgba(3, 255, 200, 0.05) 0%, rgba(3, 255, 200, 0.01) 50%, rgba(3, 255, 200, 0) 100%)',
+        'green-linear-gradient-180':
+          'linear-gradient(180deg, rgba(20, 184, 166, 0.10) 0%, rgba(20, 184, 166, 0) 100%);',
+        'green-linear-gradient-slider':
+          'linear-gradient(90deg, rgba(20, 184, 166, 0) 0%, #0ff3da87 100%)',
       },
+
       borderRadius: {
         '6xl': '75px',
         '4xl': '40px',
@@ -35,6 +40,7 @@ const config: Config = {
       },
       colors: {
         primary: '#14B8A6',
+        'primary-15': ' rgba(20, 184, 166, 0.15)',
         'primary-dark': '#0E8276',
         'teal-bg': '#3F4C49',
         'third-layer-bg': '#4F5B58',
@@ -54,6 +60,7 @@ const config: Config = {
         'white-bg-30': 'rgba(255, 255, 255, 0.30)',
         'white-bg-05': 'rgba(255, 255, 255, 0.05)',
         'white-bg-15': 'rgba(255, 255, 255, 0.15)',
+        'white-bg-20': 'rgba(255, 255, 255, 0.2)',
         'light-gray': '#56555A',
         'dark-gray': '#2D2B34',
         red: '#EF4444',

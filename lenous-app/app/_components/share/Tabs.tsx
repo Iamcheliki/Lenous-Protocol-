@@ -15,7 +15,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState<number>(tabs[0].id);
 
   return (
-    <div className="max-w-6xl mx-auto mt-24 bg-neutral-button  rounded-3xl overflow-hidden ">
+    <div className="max-w-4xl mx-auto mt-24 bg-neutral-button  rounded-3xl overflow-hidden ">
       <div className="">
         <div className="inline-flex bg-neutral-button rounded-t-3xl">
           {tabs.map((tab) => (

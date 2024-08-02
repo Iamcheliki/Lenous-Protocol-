@@ -1,8 +1,10 @@
 'use client';
 import React, { useEffect, useRef, memo } from 'react';
+import { useTokenContext } from '@/app/_context/TokenContext'; // Import your context
 
 const TradingViewWidget: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const { setTokenSymbol } = useTokenContext(); // Get the context function
 
   useEffect(() => {
     const container = containerRef.current;
@@ -18,7 +20,7 @@ const TradingViewWidget: React.FC = () => {
       width: '100%',
       height: '100%',
       autosize: true,
-      symbol: 'BTCUSDT', // Set default symbol to a crypto pair
+      symbol: 'BTCUSDT', // Default symbol
       interval: 'D',
       timezone: 'exchange',
       theme: 'Dark',
@@ -29,16 +31,12 @@ const TradingViewWidget: React.FC = () => {
       show_popup_button: true,
       popup_width: '1000',
       popup_height: '650',
-
-      // Add below settings to restrict to crypto markets
-      symbol_search_request: {
-        type: 'crypto',
-      },
-      symbol_search_results: {
-        type: 'crypto',
-      },
-      symbol_search_preset: {
-        type: 'crypto',
+      symbol_search_request: { type: 'crypto' },
+      symbol_search_results: { type: 'crypto' },
+      symbol_search_preset: { type: 'crypto' },
+      onSymbolChange: (symbol: string) => {
+        console.log('Symbol changed:', symbol); // For debugging
+        setTokenSymbol(symbol); // Update the context with the new symbol
       },
     });
 
@@ -49,7 +47,7 @@ const TradingViewWidget: React.FC = () => {
         container.innerHTML = ''; // Clean up the container when the component is unmounted
       }
     };
-  }, []);
+  }, [setTokenSymbol]);
 
   return (
     <div
@@ -60,7 +58,7 @@ const TradingViewWidget: React.FC = () => {
       <div
         id="technical-analysis-chart-demo"
         className="tradingview-widget-container__widget"
-        style={{ height: 'calc(100% - 32px)', width: '100%' }}
+        style={{ height: 'calc(100% - 230px)', width: '100%' }}
       ></div>
     </div>
   );

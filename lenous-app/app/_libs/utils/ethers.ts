@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { providers as ethersProviders } from 'ethers';
 import type { Client, Chain, Transport, Account } from 'viem';
 import { Config, useClient, useConnectorClient } from 'wagmi';
+
 export function clientToProvider(client: Client<Transport, Chain>) {
   const { chain, transport } = client;
   const network = {

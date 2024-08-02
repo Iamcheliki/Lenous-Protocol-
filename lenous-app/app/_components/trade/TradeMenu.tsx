@@ -1,26 +1,20 @@
 'use client';
 import React from 'react';
 import Icon from '../UI/icon';
-import Limit from './Limit';
-import Market from './Market';
 import StopLimit from './StopLimit';
 import { useState } from 'react';
+import PlaceOrder from './PlaceOrder';
+import OrderBook from './OrderBook';
 
 export default function TradeMenu() {
   const [activeMenu, setActiveMenu] = useState(0);
 
   const menuItems = [
-    // {
-    //   id: 1,
-    //   name: 'limit',
-    //   icon: 'limit',
-    //   content: <Limit />,
-    // },
     {
       id: 2,
       name: 'market',
       icon: 'market',
-      content: <Market />,
+      content: <PlaceOrder />,
     },
     {
       id: 3,
@@ -32,7 +26,7 @@ export default function TradeMenu() {
       id: 4,
       name: 'Order Book',
       icon: 'orderBook',
-      content: <div>Order Book Component</div>,
+      content: <OrderBook />,
     },
     {
       id: 5,
@@ -61,7 +55,11 @@ export default function TradeMenu() {
   ];
   return (
     <>
-      <div className="activeMenu bg-dark-gray py-9 px-6">
+      <div
+        className={`activeMenu h-[538px] overflow-y-auto overflow-x-hidden ${
+          activeMenu != 0 ? 'w-[400px] pt-4 p-4' : ''
+        } bg-dark-gray `}
+      >
         {menuItems.find((item) => item.id === activeMenu)?.content}
       </div>
       <div className="w-24 bg-light-gray py-9 h-full flex justify-center">

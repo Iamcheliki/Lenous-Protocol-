@@ -1,19 +1,21 @@
 export const tokenList = [
   {
-    id: 'ethereum',
-    ticker: 'ETH',
-    img: 'https://cdn.moralis.io/eth/eth.png',
-    name: 'Ethereum',
-    address: '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359', // Placeholder for native ETH
+    id: 'WETH',
+    ticker: 'WETH',
+    img: 'https://cdn.moralis.io/eth/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.png',
+    name: 'Wrapped Ether',
+    address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // Placeholder for native ETH
     decimals: 18,
+    symbol: 'WETH',
   },
   {
     id: 'usd-coin',
     ticker: 'USDC',
     img: 'https://cdn.moralis.io/eth/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png',
     name: 'USD Coin',
-    address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
     decimals: 6,
+    symbol: 'USDC',
   },
   {
     id: 'chainlink',

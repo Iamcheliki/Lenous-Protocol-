@@ -3,6 +3,7 @@
 import { WagmiProvider, cookieToInitialState } from 'wagmi';
 import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { TokenProvider } from '@/app/_context/TokenContext';
 
 import { config } from './_libs/config';
 
@@ -19,7 +20,9 @@ export default function Providers({ children, cookie }: Props) {
   return (
     <WagmiProvider config={config} initialState={initialState}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>{children}</RainbowKitProvider>
+        <RainbowKitProvider>
+          <TokenProvider>{children}</TokenProvider>
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );
